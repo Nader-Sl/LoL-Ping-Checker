@@ -37,7 +37,6 @@ public class PingChecker extends JFrame {
     final static private Font note = new Font(Font.MONOSPACED, Font.BOLD, 13);
     private gameCanvas gs;
     private BufferedImage backGround;
-    private ArrayList<Process> processes = new ArrayList<Process>();
     private final ExecutorService executor;
     private final static Logger LOGGER = Logger.getLogger(PingChecker.class.getName());
 
@@ -105,7 +104,6 @@ public class PingChecker extends JFrame {
             Runtime runtime = Runtime.getRuntime();
 
             Process proc = runtime.exec("ping -" + (System.getProperty("os.name").startsWith("Windows") ? "n" : "c") + " " + pingsPerRequest + " " + ip);
-            processes.add(proc);
             proc.waitFor();
 
             int exit = proc.exitValue();
