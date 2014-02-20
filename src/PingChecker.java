@@ -45,7 +45,7 @@ public class PingChecker extends JFrame {
         // routtracing EU servers showed that both EUW and EUNE servers are derived from same shared local server thus they have the same ping.
         routTracedIPs.put("EU West", new Ping("95.172.67.1"));
         routTracedIPs.put("EU Nordic East", new Ping("95.172.67.1"));
-        routTracedIPs.put("OCE", new Ping("154.54.89.57"));
+        routTracedIPs.put("OCE", new Ping("114.31.192.105"));
 
     }
 
